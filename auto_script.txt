@@ -13,7 +13,7 @@ sudo systemctl stop dnsmasq
 sudo systemctl stop hostapd
 
 # make backup folder
-sudo mkdir backup
+sudo mkdir $current_location
 
 
 
