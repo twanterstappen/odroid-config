@@ -32,7 +32,7 @@ if [ if "$backup_location/used_script.txt" ]; then
     echo 'Delete used_script.txt to before executing this script'    
     exit
 else
-    sudo echo '# execute_checker' > $backup_location/used_script.txt
+    sudo echo '# execute_checker' > used_script.txt
 fi
 
 
