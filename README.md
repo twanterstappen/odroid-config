@@ -12,3 +12,6 @@ Like the auto_script.sh file, for those do the following:
 sudo dos2unix auto_script.sh
 
 If you get error's, then check all the config files that were applied. If the file is dos run the command: dos2unix FILENAME
+
+
+There is a possibility that the iptables rules wont apply. This is because the odroid need a reboot. If so run the firewal_config.sh bash script.
