@@ -28,9 +28,9 @@ sudo cp /etc/rc.local $backup_location
 
 # DNSservers install on host
 # WORK IN PROGRESS!
-# sudo cat $config_location/dns_settings.txt >> /etc/resolvconf/resolv.conf.d/head
+sudo cat $config_location/dns_settings.txt >> /etc/resolvconf/resolv.conf.d/head
 
-# IP for wlan0
+# IP config for interfaces
 sudo cat $config_location/interfaces.txt >> /etc/network/interfaces
 
 
