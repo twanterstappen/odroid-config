@@ -1,7 +1,11 @@
 #!/usr/bin/bash
 
 current_location=$(pwd)
-config_location=$(pwd)/odroid-config/config
+if [[ "$PWD" =~ odroid-config ]]; then
+    config_location=$(pwd)/config
+else
+    config_location=$(pwd)/odroid-config/config
+fi
 backup_location=$(pwd)/backup
 
 
@@ -26,9 +30,12 @@ sudo cp /etc/rc.local $backup_location
 # WORK IN PROGRESS!
 # sudo cat $config_location/dns_settings.txt >> /etc/resolvconf/resolv.conf.d/head
 
+# IP for wlan0
+sudo ifconfig wlan0 192.168.0.1 netmask 255.255.255.0
+
 
 # create file execution parameter
-if [ if "$backup_location/used_script.txt" ]; then
+if [ -f "$backup_location/used_script.txt" ]; then
     echo 'code is already used. Script will be closed.'
     echo 'Delete used_script.txt to before executing this script'    
     exit
@@ -59,7 +66,7 @@ sudo systemctl start dnsmasq
 sudo sed -i 's,#DAEMON_CONF="",DAEMON_CONF="/etc/hostapd/hostapd.conf",' /etc/default/hostapd
 
 # copy the config file to hostapd.conf
-sudo cat $config_location/hostapd.conf >> /etc/hostapd/hostapd.conf
+sudo cat $config_location/hostapd.conf > /etc/hostapd/hostapd.conf
 
 sudo systemctl unmask hostapd
 sudo systemctl enable hostapd
