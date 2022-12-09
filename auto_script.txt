@@ -91,4 +91,4 @@ sudo sh -c "iptables-save >> /etc/iptables.ipv4.nat"
 
 # set config to boot
 sudo cat $config_location/rc.local_config.txt > /etc/rc.local
-
+sudo dos2unix /etc/rc.local

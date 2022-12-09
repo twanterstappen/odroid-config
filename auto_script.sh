@@ -28,7 +28,7 @@ sudo cp /etc/rc.local $backup_location
 
 # DNSservers install on host
 # WORK IN PROGRESS!
-sudo cat $config_location/dns_settings.txt >> /etc/resolvconf/resolv.conf.d/head
+# sudo cat $config_location/dns_settings.txt >> /etc/resolvconf/resolv.conf.d/head
 
 # IP for wlan0
 sudo ifconfig wlan0 192.168.0.1 netmask 255.255.255.0
@@ -67,7 +67,7 @@ sudo sed -i 's,#DAEMON_CONF="",DAEMON_CONF="/etc/hostapd/hostapd.conf",' /etc/de
 
 # copy the config file to hostapd.conf
 sudo cat $config_location/hostapd.conf > /etc/hostapd/hostapd.conf
-dos2unix /etc/hostapd/hostapd.conf
+sudo dos2unix /etc/hostapd/hostapd.conf
 
 sudo systemctl unmask hostapd
 sudo systemctl enable hostapd
@@ -91,4 +91,4 @@ sudo sh -c "iptables-save >> /etc/iptables.ipv4.nat"
 
 # set config to boot
 sudo cat $config_location/rc.local_config.txt > /etc/rc.local
-
+sudo dos2unix /etc/rc.local
