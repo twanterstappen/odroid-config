@@ -13,7 +13,10 @@ sudo apt=get install git dos2unix
 pay attention!!!
 some files need a convertion from dos to unix. 
 Like the auto_script.sh file, for those do the following:
+
 sudo dos2unix auto_script.sh
+
+
 
 If you get error's, then check all the config files that were applied. If the file is dos run the command: dos2unix FILENAME
 
