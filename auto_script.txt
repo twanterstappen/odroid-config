@@ -67,6 +67,7 @@ sudo sed -i 's,#DAEMON_CONF="",DAEMON_CONF="/etc/hostapd/hostapd.conf",' /etc/de
 
 # copy the config file to hostapd.conf
 sudo cat $config_location/hostapd.conf > /etc/hostapd/hostapd.conf
+sudo dos2unix /etc/hostapd/hostapd.conf
 
 sudo systemctl unmask hostapd
 sudo systemctl enable hostapd
