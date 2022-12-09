@@ -30,7 +30,7 @@ sudo cp /etc/rc.local $backup_location
 # WORK IN PROGRESS!
 # sudo cat $config_location/dns_settings.txt >> /etc/resolvconf/resolv.conf.d/head
 
-# IP for wlan0
+# IP config for interfaces
 sudo cat $config_location/interfaces.txt >> /etc/network/interfaces
 
 
