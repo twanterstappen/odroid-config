@@ -22,3 +22,11 @@ If you get error's, then check all the config files that were applied. If the fi
 
 
 There is a possibility that the iptables rules wont apply. This is because the odroid need a reboot. If so run the firewal_config.sh bash script.
+
+
+If you can't ping google.com edit the following: sudo nano /etc/resolvconf/resolv.conf.d/head
+
+add this:
+
+nameserver 8.8.8.8
+nameserver 8.8.4.4
