@@ -31,7 +31,7 @@ sudo cp /etc/rc.local $backup_location
 # sudo cat $config_location/dns_settings.txt >> /etc/resolvconf/resolv.conf.d/head
 
 # IP for wlan0
-sudo ifconfig wlan0 192.168.0.1 netmask 255.255.255.0
+sudo cat $config_location/interfaces.txt >> /etc/network/interfaces
 
 
 # create file execution parameter
