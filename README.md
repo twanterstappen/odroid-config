@@ -1,9 +1,13 @@
 # odroid-config
 
 For your odroid do the following:
+
 sudo apt-get update -y
+
 sudo apt-get upgrade -y
+
 sudo apt=get install git dos2unix
+
 
 
 pay attention!!!
