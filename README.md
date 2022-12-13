@@ -9,6 +9,9 @@ sudo apt-get upgrade -y
 sudo apt-get install git dos2unix
 
 
+auto_script.sh is for installing a access point.
+
+
 
 pay attention!!!
 some files need a convertion from dos to unix. 
