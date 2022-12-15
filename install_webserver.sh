@@ -34,8 +34,9 @@ sudo git clone https://github.com/Twan2013/flask.git
 sudo mv flask /var/www
 # Create virtual environment
 sudo virtualenv /var/www/flask/flaskr/venv
-# Installing flask module in venv
+# Installing flask and mysql module in venv
 sudo /var/www/flask/flaskr/venv/bin/pip install Flask
+ sudo /var/www/flask/flaskr/venv/bin/pip install mysql-connector-python
 
 APACHE_LOG_DIR='${APACHE_LOG_DIR}'
 
