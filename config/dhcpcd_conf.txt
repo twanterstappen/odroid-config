@@ -1,5 +1,0 @@
-interface wlan0
-    static ip_address=192.168.0.1/24
-    denyinterfaces eth0
-    denyinterfaces wlan0
-    nohook wpa_supplicant

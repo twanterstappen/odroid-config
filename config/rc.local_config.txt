@@ -1,7 +1,0 @@
-#!/bin/bash
-
-
-if [ -f /aafirstboot ]; then /aafirstboot start ; fi
-iptables-restore < /etc/iptables.ipv4.nat
-systemctl restart hostapd
-exit 0
