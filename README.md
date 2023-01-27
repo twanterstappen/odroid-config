@@ -2,34 +2,18 @@
 
 For your odroid do the following:
 
-sudo apt-get update -y
-
-sudo apt-get upgrade -y
-
-sudo apt-get install git dos2unix
 
 
-auto_script.sh is for installing a access point.
+script.sh is for setup and installing a sbc with Ubuntu 20.04 on it.
 
+Copy the script to your sbc using:
 
+Sudo nano script.sh
+Then copy and paste the script into script.sh
+Run the script with: sudo bash ./script.sh
 
-pay attention!!!
-some files need a convertion from dos to unix. 
-Like the auto_script.sh file, for those do the following:
+When prompt, first run of the script chose: y
+SBC will update and reboot itself. This is needed because of the iptables.
+When SBC is reboted, rerun the script and when prompt, chose the option: n
 
-sudo dos2unix auto_script.sh
-
-
-
-If you get error's, then check all the config files that were applied. If the file is dos run the command: dos2unix FILENAME
-
-
-There is a possibility that the iptables rules wont apply. This is because the odroid need a reboot. If so run the firewal_config.sh bash script.
-
-
-If you can't ping google.com edit the following: sudo nano /etc/resolvconf/resolv.conf.d/head
-
-add this:
-
-nameserver 8.8.8.8
-nameserver 8.8.4.4
+There is a possibility that the iptables rules wont apply. This is because the odroid need a reboot. If so, reboot and rerun the script.
