@@ -16,6 +16,7 @@ Run the script with: sudo bash ./script.sh
 
 
 
+
 When prompt, first run of the script chose: y
 SBC will update and reboot itself. This is needed because of the iptables.
 When SBC is reboted, rerun the script and when prompt, chose the option: n
