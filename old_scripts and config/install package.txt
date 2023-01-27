@@ -1,0 +1,28 @@
+echo "uportal ALL = ( ALL) PASSWD: ALL" > /etc/sudoers.d/uportal
+
+sudo passwd -l root
+
+sudo apt-get install git
+
+
+
+sudo apt --fix-broken install
+
+sudo apt-get install update
+
+sudo apt-get install upgrade
+
+sudo apt-get install man
+
+sudo apt-get install apache2
+
+sudo apt-get install libapache2-mod-wsgi-py3
+
+sudo apt-get install dhcpcd5
+
+sudo apt-get install dnsmasq
+
+sudo apt-get install hostapd
+
+sudo apt-get install ifupdown
+
